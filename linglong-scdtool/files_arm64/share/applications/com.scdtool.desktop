@@ -1,0 +1,14 @@
+[Desktop Entry]
+X-linglong=com.scdtool
+Comment=Sogou Cell Dictionary Tool
+Comment[zh_CN]=搜狗细胞词库工具
+Exec=scdtool
+GenericName=Sogou Cell Dictionary Tool
+GenericName[zh_CN]=搜狗细胞词库工具
+Name=Sogou Cell Dictionary Tool
+Name[zh_CN]=搜狗细胞词库工具
+StartupNotify=false
+Terminal=false
+Type=Application
+Categories=Utility
+Icon=com.scdtool

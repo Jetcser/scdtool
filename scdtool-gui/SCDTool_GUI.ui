@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SCDTool_GUI</class>
+ <widget class="QMainWindow" name="SCDTool_GUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>570</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>570</width>
+    <height>650</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>570</width>
+    <height>650</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>搜狗拼音细胞词库工具</string>
+  </property>
+  <property name="animated">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabGroup">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>531</width>
+      <height>581</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tabTXTMake">
+     <attribute name="title">
+      <string>文本词库制作</string>
+     </attribute>
+     <widget class="QLineEdit" name="txtLineChooseFile">
+      <property name="geometry">
+       <rect>
+        <x>145</x>
+        <y>20</y>
+        <width>351</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>中文词条文件.txt</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="txtResult">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>80</y>
+        <width>471</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <property name="mouseTracking">
+       <bool>false</bool>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::FocusPolicy::NoFocus</enum>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Sunken</enum>
+      </property>
+      <property name="undoRedoEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="acceptRichText">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="txtButtonConvert">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>510</y>
+        <width>80</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>制作词条</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="txtButtonOpenDir">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>510</y>
+        <width>80</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>打开目录</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="txtButtonChooseFile">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>120</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>选择 .txt 文件</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tabSCDMake">
+     <attribute name="title">
+      <string>细胞词库生成</string>
+     </attribute>
+     <widget class="QPushButton" name="scdButtonOpenDir">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>510</y>
+        <width>80</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>打开目录</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="scdLineChooseFile">
+      <property name="geometry">
+       <rect>
+        <x>145</x>
+        <y>20</y>
+        <width>351</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string>搜狗拼音文本词库.txt</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="scdButtonChooseFile">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>120</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>选择搜狗文本词库</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="scdResult">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>80</y>
+        <width>471</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::FocusPolicy::NoFocus</enum>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="scdButtonMake">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>510</y>
+        <width>80</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>生成词库</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tabSCDInfo">
+     <attribute name="title">
+      <string>细胞词库自定义</string>
+     </attribute>
+     <widget class="QLineEdit" name="infoLineDictRemark">
+      <property name="geometry">
+       <rect>
+        <x>115</x>
+        <y>190</y>
+        <width>381</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="infoButtonModify">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>510</y>
+        <width>80</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>词库修改</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="infoResult">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>271</y>
+        <width>471</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::FocusPolicy::NoFocus</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="infoButtonChooseFile">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>120</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>选择细胞词库文件</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="infoRadioOfficial">
+      <property name="geometry">
+       <rect>
+        <x>135</x>
+        <y>230</y>
+        <width>85</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>官方词库</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="infoRadioOther">
+      <property name="geometry">
+       <rect>
+        <x>225</x>
+        <y>230</y>
+        <width>85</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>其他词库</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="infoLineDictName">
+      <property name="geometry">
+       <rect>
+        <x>115</x>
+        <y>110</y>
+        <width>381</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="infoLineCategory">
+      <property name="geometry">
+       <rect>
+        <x>115</x>
+        <y>150</y>
+        <width>381</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="infoLabelDictCategory">
+      <property name="geometry">
+       <rect>
+        <x>35</x>
+        <y>150</y>
+        <width>55</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>词库类别：</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="infoLineDictId">
+      <property name="geometry">
+       <rect>
+        <x>115</x>
+        <y>70</y>
+        <width>381</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="infoLabelDictFormat">
+      <property name="geometry">
+       <rect>
+        <x>35</x>
+        <y>230</y>
+        <width>81</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>词库数据结构：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="infoLabelDictId">
+      <property name="geometry">
+       <rect>
+        <x>35</x>
+        <y>70</y>
+        <width>55</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>词库编号：</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="infoCheckBoxOfficial">
+      <property name="geometry">
+       <rect>
+        <x>325</x>
+        <y>230</y>
+        <width>161</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>修改文件头为官方词库</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="infoLabelDictName">
+      <property name="geometry">
+       <rect>
+        <x>35</x>
+        <y>110</y>
+        <width>55</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>词库名称：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="infoLabelDictRemark">
+      <property name="geometry">
+       <rect>
+        <x>35</x>
+        <y>190</y>
+        <width>55</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>词库备注：</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="infoLineChooseFile">
+      <property name="geometry">
+       <rect>
+        <x>145</x>
+        <y>20</y>
+        <width>351</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>搜狗拼音.scel 或QQ拼音.qcel</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="infoButtonParse">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>510</y>
+        <width>80</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>词库解析</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tabAbout">
+     <attribute name="title">
+      <string>关于</string>
+     </attribute>
+     <widget class="QPlainTextEdit" name="aboutText">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>531</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <property name="cursor" stdset="0">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="mouseTracking">
+       <bool>true</bool>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::FocusPolicy::StrongFocus</enum>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Plain</enum>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="undoRedoEnabled">
+       <bool>false</bool>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="plainText">
+       <string>简介
+
+1.文本词库制作：
+  输入含有中文词条的.txt文件，词条之间使用非中文字符分割，输出搜狗拼音格式的文本词库。
+  参考项目：github.com/nopdan/pinyin-marker。
+2.细胞词库生成：
+  输入制作好的.txt格式的搜狗文本词库，将文本词库转换为.scel格式搜狗拼音细胞词库。
+  参考项目：github.com/nopdan/scel-maker。
+3.细胞词库自定义：
+  解析并自定义细胞词库的属性信息，如词库ID、词库名称、词库类别、词库备注。
+
+MeGusta&lt;Jetcser@gmail.com&gt;</string>
+      </property>
+      <property name="textInteractionFlags">
+       <set>Qt::TextInteractionFlag::NoTextInteraction</set>
+      </property>
+      <property name="backgroundVisible">
+       <bool>false</bool>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>tabGroup</tabstop>
+  <tabstop>txtButtonChooseFile</tabstop>
+  <tabstop>txtLineChooseFile</tabstop>
+  <tabstop>txtResult</tabstop>
+  <tabstop>txtButtonConvert</tabstop>
+  <tabstop>txtButtonOpenDir</tabstop>
+  <tabstop>scdButtonChooseFile</tabstop>
+  <tabstop>scdLineChooseFile</tabstop>
+  <tabstop>scdResult</tabstop>
+  <tabstop>scdButtonMake</tabstop>
+  <tabstop>scdButtonOpenDir</tabstop>
+  <tabstop>infoButtonChooseFile</tabstop>
+  <tabstop>infoLineChooseFile</tabstop>
+  <tabstop>infoLineDictId</tabstop>
+  <tabstop>infoLineDictName</tabstop>
+  <tabstop>infoLineCategory</tabstop>
+  <tabstop>infoLineDictRemark</tabstop>
+  <tabstop>infoRadioOfficial</tabstop>
+  <tabstop>infoRadioOther</tabstop>
+  <tabstop>infoCheckBoxOfficial</tabstop>
+  <tabstop>infoResult</tabstop>
+  <tabstop>infoButtonParse</tabstop>
+  <tabstop>infoButtonModify</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

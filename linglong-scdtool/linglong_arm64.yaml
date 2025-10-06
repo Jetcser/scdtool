@@ -1,0 +1,17 @@
+version: "1"
+package:
+  id: com.scdtool
+  name: 搜狗细胞词库工具
+  version: 1.0.0.2
+  kind: app
+  description: |-
+    搜狗细胞词库工具，用于制作、自定义搜狗细胞词库。
+
+command: [scdtool]
+
+base: org.deepin.base/25.2.0
+runtime: org.deepin.runtime.dtk/25.2.0
+
+build: |
+  mkdir -p $PREFIX/{bin,share}
+  cp -a /project/files_arm64/*  $PREFIX

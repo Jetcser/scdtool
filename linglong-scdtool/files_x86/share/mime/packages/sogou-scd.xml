@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+
+  <mime-type type="application/vnd.sogou.qcel">
+    <comment>QQ Pinyin Cell Dictionary</comment>
+    <comment xml:lang="zh">QQ拼音细胞词库</comment>
+    <glob pattern="*.qcel"/>
+    <icon name="application-vnd-sogou-qcel"/>
+  </mime-type>
+
+ <mime-type type="application/vnd.sogou.scel">
+    <comment>Sogou Pinyin Cell Dictionary</comment>
+    <comment xml:lang="zh">搜狗拼音细胞词库</comment>
+    <glob pattern="*.scel"/>
+    <icon name="application-vnd-sogou-scel"/>
+  </mime-type>
+  
+  </mime-info>

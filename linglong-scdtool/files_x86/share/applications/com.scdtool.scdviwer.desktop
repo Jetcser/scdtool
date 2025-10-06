@@ -1,0 +1,15 @@
+[Desktop Entry]
+X-linglong=com.scdmaker.deepin.linyaps
+Comment=Sogou Cell Dictionary Viewer
+Comment[zh_CN]=查看搜狗细胞词库信息
+Exec=scdviewer %F
+GenericName=Sogou Cell Dictionary Viewer
+GenericName[zh_CN]=查看搜狗细胞词库信息
+MimeType=application/vnd.sogou.scel;application/vnd.sogou.qcel;
+Name=scdviewer
+Name[zh_CN]=搜狗细胞词库查看器
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=Utility
+Icon=com.scdtool
