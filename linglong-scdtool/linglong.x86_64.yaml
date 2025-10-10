@@ -2,7 +2,7 @@ version: "1"
 package:
   id: com.scdtool
   name: 搜狗细胞词库工具
-  version: 1.0.0.2
+  version: 1.1.0.3
   kind: app
   description: |-
     搜狗细胞词库工具，用于制作、自定义搜狗细胞词库。
